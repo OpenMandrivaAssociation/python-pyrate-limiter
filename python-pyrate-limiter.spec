@@ -4,7 +4,7 @@ Release:        1
 Summary:        The request rate limiter using Leaky-bucket algorithm 
 License:        MIT
 URL:            https://github.com/vutran1710/PyrateLimiter
-Source0:        https://files.pythonhosted.org/packages/source/p/pyrate-limiter/pyrate-limiter_%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/p/pyrate-limiter/pyrate_limiter-%{version}.tar.gz
  
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -15,7 +15,7 @@ BuildRequires:  python3dist(wheel)
 The request rate limiter using Leaky-bucket algorithm.
  
 %prep
-%autosetup -n pyrate_limiter_%{version}
+%autosetup -n pyrate_limiter-%{version}
  
 %build
 %py_build
