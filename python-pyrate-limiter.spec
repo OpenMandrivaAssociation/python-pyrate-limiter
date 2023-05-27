@@ -27,3 +27,5 @@ The request rate limiter using Leaky-bucket algorithm.
 %files
 %doc README.md
 %license LICENSE
+%{python_sitelib}/pyrate_limiter-%{version}.dist-info/
+%{python_sitelib}/pyrate_limiter/
