@@ -1,6 +1,6 @@
 Name:           python-pyrate-limiter
-Version:        3.7.0
-Release:        2
+Version:        3.9.0
+Release:        1
 Summary:        The request rate limiter using Leaky-bucket algorithm 
 License:        MIT
 URL:            https://github.com/vutran1710/PyrateLimiter
