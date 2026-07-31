@@ -1,5 +1,5 @@
 Name:           python-pyrate-limiter
-Version:        3.9.0
+Version:        4.4.0
 Release:        1
 Summary:        The request rate limiter using Leaky-bucket algorithm 
 License:        MIT
@@ -16,7 +16,7 @@ BuildRequires:  python3dist(poetry)
 The request rate limiter using Leaky-bucket algorithm.
  
 %prep
-%autosetup -n pyrate_limiter-%{version}
+%autosetup -n pyrate_limiter-4.4.0
  
 %build
 %py_build
