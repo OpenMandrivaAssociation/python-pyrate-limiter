@@ -8,16 +8,21 @@ URL:            https://github.com/vutran1710/PyrateLimiter
 Source0:        https://files.pythonhosted.org/packages/source/p/pyrate-limiter/pyrate_limiter-%{version}.tar.gz
  
 BuildArch:      noarch
-BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(pip)
-BuildRequires:  python3dist(wheel)
-BuildRequires:  python3dist(poetry)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(hatchling)
 
 %description
 The request rate limiter using Leaky-bucket algorithm.
  
 %prep
-%autosetup -n pyrate_limiter-4.4.0
+%autosetup -n pyrate_limiter-%{version}
+# uv-dynamic-versioning is not packaged. The version is the spec version.
+sed -i 's/, "uv-dynamic-versioning"//' pyproject.toml
+sed -i 's/source = "uv-dynamic-versioning"/path = "pyrate_limiter\/_version.py"/' pyproject.toml
+cat > pyrate_limiter/_version.py << 'EOF'
+__version__ = "%{version}"
+EOF
  
 %build
 %py_build
